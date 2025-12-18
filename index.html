@@ -289,14 +289,34 @@ form button{
 <section id="contact" class="fade">
   <h2 style="text-align:center;">Contact Me</h2>
   <p style="text-align:center;">If you want to connect with me, fill out the form below</p>
-  <form onsubmit="sendMessage(event)">
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Email Address" required>
-    <input type="tel" placeholder="Phone Number">
-    <textarea placeholder="Message"></textarea>
-    <button type="submit">Submit</button>
-    <div id="success"></div>
-  </form>
+  <form action="https://formspree.io/f/mzznnjjn" method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email address</label>
+                        <input type="email" name="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea name="message" class="form-control" rows="4" placeholder="Enter your message"
+                            required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" name="phone" class="form-control" placeholder="Enter your phone number">
+                    </div>
+
+                    <button type="submit" class="btn btn-light px-4">
+                        Submit
+                    </button>
+
+                </form>
 </section>
 
 <script>
